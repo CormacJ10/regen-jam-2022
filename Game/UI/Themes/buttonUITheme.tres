@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[resource]
+/colors/background-color = Color( 0.0392157, 0.623529, 0.937255, 1 )
+/colors/color = Color( 0.101961, 0.635294, 0.898039, 1 )
+/styles/color = SubResource( 1 )
