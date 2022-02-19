@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Textures/airBarTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Textures/dirtTileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Art/waterBar-long.png" type="Texture" id=3]
+[ext_resource path="res://Art/bar-long.png" type="Texture" id=4]
+[ext_resource path="res://Art/airBar-long.png" type="Texture" id=5]
+[ext_resource path="res://Art/Sprout Lands - Sprites - premium pack/tilesets/Water.png" type="Texture" id=6]
+[ext_resource path="res://Art/soilBar-long.png" type="Texture" id=7]
+
+[node name="HealthBarsObject" type="Control"]
+margin_left = 6.0
+margin_top = 5.0
+margin_right = 461.0
+margin_bottom = 163.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirtBar Container" type="HBoxContainer" parent="."]
+anchor_left = 0.057
+anchor_top = -0.01
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -372.0
+margin_bottom = -142.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="DirtBar Container"]
+margin_right = 420.0
+margin_bottom = 48.0
+max_value = 5.0
+value = 5.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 7 )
+
+[node name="WaterBar Container" type="HBoxContainer" parent="."]
+anchor_left = 0.057
+anchor_top = 0.277
+anchor_right = 0.163
+anchor_bottom = 0.286
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="WaterBar Container"]
+margin_right = 420.0
+margin_bottom = 49.0
+max_value = 5.0
+value = 5.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="AirBar Container" type="HBoxContainer" parent="."]
+anchor_left = 0.057
+anchor_top = 0.582
+anchor_right = 0.163
+anchor_bottom = 0.591
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="AirBar Container"]
+margin_right = 420.0
+margin_bottom = 48.0
+max_value = 5.0
+value = 5.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+
+[node name="AirTileMap" type="TileMap" parent="."]
+position = Vector2( 10, -20 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 131072, 0, 0 )
+
+[node name="DirtTileMap" type="TileMap" parent="."]
+position = Vector2( 10, 11 )
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0 )
+
+[node name="WaterSprite" type="Sprite" parent="."]
+position = Vector2( 16, 67 )
+scale = Vector2( 0.359375, 1.3125 )
+texture = ExtResource( 6 )
