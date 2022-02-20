@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Wind SFX.wav-f93af854a7960d0fb70711f5f68c0232.sample"
+
+[deps]
+
+source_file="res://SFX/Wind SFX.wav"
+dest_files=[ "res://.import/Wind SFX.wav-f93af854a7960d0fb70711f5f68c0232.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dead Notes.wav-ab638fc92f7e292d4cc02c1c48cde644.sample"
+
+[deps]
+
+source_file="res://SFX/Dead Notes.wav"
+dest_files=[ "res://.import/Dead Notes.wav-ab638fc92f7e292d4cc02c1c48cde644.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

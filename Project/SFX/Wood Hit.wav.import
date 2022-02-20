@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Wood Hit.wav-41b0cb094211978b7ff519036bbe4852.sample"
+
+[deps]
+
+source_file="res://SFX/Wood Hit.wav"
+dest_files=[ "res://.import/Wood Hit.wav-41b0cb094211978b7ff519036bbe4852.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

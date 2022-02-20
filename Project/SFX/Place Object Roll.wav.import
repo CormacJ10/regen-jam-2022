@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Place Object Roll.wav-d11e6d761b704b9628ede692d19b7390.sample"
+
+[deps]
+
+source_file="res://SFX/Place Object Roll.wav"
+dest_files=[ "res://.import/Place Object Roll.wav-d11e6d761b704b9628ede692d19b7390.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
