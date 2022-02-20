@@ -4,13 +4,13 @@ class_name Level
 export(int) var time_limit = 4;
 export(int) var action_limit = 2;
 
-export(float) var soil_quality = 0;
-export(float) var air_quality = 0;
-export(float) var water_quality = 0;
+export(float) var soil_quality = 50;
+export(float) var air_quality = 50;
+export(float) var water_quality = 50;
 
-export(float) var soil_quality_target = 0;
-export(float) var air_quality_target = 0;
-export(float) var water_quality_target = 0;
+export(float) var soil_quality_target = 50;
+export(float) var air_quality_target = 50;
+export(float) var water_quality_target = 50;
 
 signal end_turn;
 signal take_action;
@@ -37,6 +37,15 @@ var current_action: int = 1
 var tiles: Array = []
 
 func _ready():
+	randomize()
+	air_quality += (randi()%50) - 25
+	water_quality += (randi()%50) - 25
+	soil_quality += (randi()%50) - 25
+	
+	emit_signal("air_quality_changed", air_quality)
+	emit_signal("water_quality_changed", water_quality)
+	emit_signal("soil_quality_changed", soil_quality)
+	
 	load_tiles()
 	play_turn()
 

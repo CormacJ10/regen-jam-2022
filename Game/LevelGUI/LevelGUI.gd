@@ -3,12 +3,10 @@ class_name LevelGUI
 
 signal tile_clicked(tile)
 
-onready var turn_label: Label = $VBoxContainer/TurnLabel
-onready var action_label: Label = $VBoxContainer/ActionLabel
-onready var air_label: Label = $VBoxContainer/AirLabel
-onready var water_label: Label = $VBoxContainer/WaterLabel
-onready var soil_label: Label = $VBoxContainer/SoilLabel
-onready var tiles_container: VBoxContainer = $VBoxContainer/Tiles;
+onready var turn_label: Label = $TurnLabel
+onready var action_indicator: Panel = $DaylightIndicator
+onready var health_bars: HealthBarsObject = $HealthBarsObject
+onready var tiles_container: GridContainer = $Tiles
 
 var tiles: Array = []
 var tile_buttons: Array = []
@@ -36,11 +34,15 @@ func add_tile(tile: TileData):
 	tile_button.connect("pressed", self, "on_tile_clicked", [tile])
 
 func update_labels():
-	turn_label.text = "Turn: %d"%current_turn
-	action_label.text = "Action: %d"%current_action
-	air_label.text = "Air: %d"%current_air_quality
-	water_label.text = "Water: %d"%current_water_quality
-	soil_label.text = "Soil: %d"%current_soil_quality
+	turn_label.text = "Turn %d of 4"%current_turn
+	health_bars.air_bar.value = current_air_quality
+	health_bars.water_bar.value = current_water_quality
+	health_bars.soil_bar.value = current_soil_quality
+	for i in range(action_indicator.get_child_count()):
+		if i+1 == current_action:
+			action_indicator.get_child(i).visible = true
+		else:
+			action_indicator.get_child(i).visible = false
 
 func on_tile_clicked(tile: TileData):
 	emit_signal("tile_clicked", tile)

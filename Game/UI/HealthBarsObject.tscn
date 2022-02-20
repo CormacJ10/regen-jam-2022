@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/HealthBarsObject.gd" type="Script" id=1]
+[ext_resource path="res://Art/waterBar-long.png" type="Texture" id=3]
+[ext_resource path="res://Art/bar-long.png" type="Texture" id=4]
+[ext_resource path="res://Art/airBar-long.png" type="Texture" id=5]
+[ext_resource path="res://Art/soilBar-long.png" type="Texture" id=7]
+
+[node name="HealthBarsObject" type="Control"]
+anchor_right = 0.424
+anchor_bottom = 0.24
+margin_right = -0.176025
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirtBar Container" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_right = -10.0
+margin_bottom = 48.0
+size_flags_horizontal = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="DirtBar Container"]
+margin_bottom = 48.0
+
+[node name="TextureProgress" type="TextureProgress" parent="DirtBar Container"]
+margin_left = 4.0
+margin_right = 424.0
+margin_bottom = 48.0
+max_value = 100.0
+value = 50.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 7 )
+
+[node name="WaterBar Container" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -24.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="WaterBar Container"]
+margin_bottom = 48.0
+
+[node name="TextureProgress" type="TextureProgress" parent="WaterBar Container"]
+margin_left = 4.0
+margin_right = 424.0
+margin_bottom = 48.0
+max_value = 100.0
+value = 50.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="AirBar Container" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="AirBar Container"]
+margin_bottom = 48.0
+
+[node name="TextureProgress" type="TextureProgress" parent="AirBar Container"]
+margin_left = 4.0
+margin_right = 424.0
+margin_bottom = 48.0
+max_value = 100.0
+value = 50.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )

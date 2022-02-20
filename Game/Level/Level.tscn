@@ -9,6 +9,8 @@
 script = ExtResource( 2 )
 
 [node name="Grid" parent="." instance=ExtResource( 1 )]
+position = Vector2( 100, 100 )
+height = 5
 default_tile = ExtResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
