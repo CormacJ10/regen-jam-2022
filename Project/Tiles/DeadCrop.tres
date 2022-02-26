@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Tile/TileData.gd" type="Script" id=1]
+[ext_resource path="res://Art/dead-crop.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Dead Crop"
+description = ""
+entry_soil_quality_delta = 0.0
+entry_air_quality_delta = 0.0
+entry_water_quality_delta = 0.0
+ongoing_soil_quality_delta = -15.0
+ongoing_air_quality_delta = 0.0
+ongoing_water_quality_delta = 0.0
+exit_soil_quality_delta = 0.0
+exit_air_quality_delta = 0.0
+exit_water_quality_delta = 0.0
+score_delta = 0
+life_time = 0
+sprite = ExtResource( 2 )

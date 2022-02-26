@@ -1,6 +1,5 @@
 extends Control
 
-func _input(event):
-	if event is InputEventKey:
-		if event.pressed:
-			sceneManager.quit_game()
+
+func _on_QuitButton_pressed():
+	get_tree().quit()
